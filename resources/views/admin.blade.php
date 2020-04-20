@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Dashboard - Admnistrativo</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -53,14 +53,21 @@
                                         <div data-w-tab="Cargos" class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel"
                                              aria-labelledby="w-tabs-0-data-w-tab-0">
                                             <div class="w-form">
-                                                <form id="wf-form-squad" name="wf-form-squad" data-name="squad">
-                                                    <label for="name"class="field-label">EXEMPLO</label>
-                                                    <input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="" id="name">
+                                                <form method="post" action="/cargo" id="wf-form-squad">
+                                                    @csrf
+                                                    <label for="name_cargo" class="field-label">Cadastro de Cargos</label>
+                                                    <input type="text" class="w-input" maxlength="256" name="name_cargo" data-name="Name" placeholder="" id="name_cargo" required >
                                                     <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"></form>
 
+                                                <div class="w-form-done">
+                                                    <div>Cadastro ok</div>
+                                                </div>
+                                                <div class="w-form-fail">
+                                                    <div>Oops! Ocorroreu algum erro.</div>
+                                                </div>
                                                 <!-- Inicio do looping com laravel -->
-                                                {{-- <h1>Titulo dos cargos</h1>
-                                                <ul>
+                                                {{-- <h1>Titulo dos Cargos</h1> --}}
+                                                {{-- <ul>
                                                     @forelse ($cargos as $cargo)
                                                         <li> {{$cargo->cargo}} </li>
 
@@ -69,28 +76,51 @@
                                                     @endforelse
 
                                                 </ul> --}}
+                                                @if(isset($cargos) && count($cargos) > 0)
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <td><h4>Nome do Cargo</h4></td>
+                                                            <td><h4>Ações</h4></td>
+                                                        </tr>
+                                                    </thead>
+                                                    @foreach ($cargos as $cargo)
+                                                    <tr>
+                                                        <td>{{$cargo->cargo}}</td>
+                                                        <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                                    </tr>
+                                                    @endforeach
+                                                </table>
+                                                @else
+                                                    <h2 class="alert alert-info">Sem dados</h2>
                                                 <!-- Fim do looping -->
-                                                <div class="w-form-done">
-                                                    <div>Thank you! Your submission has been received!</div>
-                                                </div>
-                                                <div class="w-form-fail">
-                                                    <div>Oops! Something went wrong while submitting the form.</div>
-                                                </div>
+                                                @endif
                                             </div>
                                         </div>
+
                                         <div data-w-tab="Tribos" class="w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
                                              aria-labelledby="w-tabs-0-data-w-tab-1">
                                             <div class="w-form">
-                                                <form id="wf-form-squad" name="wf-form-squad" data-name="squad"><label for="name-2"
-                                                                                                                       class="field-label-2">Name</label><input type="text" class="w-input" maxlength="256"
-                                                                                                                                                                name="name-2" data-name="Name 2" placeholder="" id="name-2"><input type="submit"
-                                                                                                                                                                                                                                   value="Submit" data-wait="Please wait..." class="w-button"></form>
-                                                <div class="w-form-done">
-                                                    <div>Thank you! Your submission has been received!</div>
-                                                </div>
-                                                <div class="w-form-fail">
-                                                    <div>Oops! Something went wrong while submitting the form.</div>
-                                                </div>
+                                                <form id="wf-form-squad" method="post" action="/tribo">
+                                                    @csrf
+                                                    <label for="name-2" class="field-label-2">Cadastro de Tribos</label>
+                                                    <input type="text" class="w-input" maxlength="256" name="name_tribo" data-name="Name 2" placeholder="" id="name-2">
+                                                    <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"></form>
+                                                    <div class="w-form-done">
+                                                        <div>Cadastro ok</div>
+                                                    </div>
+                                                    <div class="w-form-fail">
+                                                        <div>Oops! Ocorroreu algum erro.</div>
+                                                    </div>
+                                                    <h1>Titulo das Tribos</h1>
+                                                    <ul>
+                                                        @forelse ($tribos as $tribo)
+                                                            <li> {{$tribo->tribonome}} </li>
+                                                        @empty
+                                                            <li> Não exitem Tribos cadastradas! </li>
+                                                        @endforelse
+                                                    </ul>
+
                                             </div>
                                         </div>
                                         <div data-w-tab="Squad" class="w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel"

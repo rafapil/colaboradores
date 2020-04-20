@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +21,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// rotas para funçoes adm v1
+
+Route::get('/home/admin', 'AdminController@lista')->name('admin');
+// Route::get('/home/admin', 'AdminController@cadastroCargo')->name('admin');
+// Route::post('/home/admin', 'AdminController@cadastroCargo')->name('admin');
+// Rota para cadastro de gestao do funcionario
+Route::post('/cargo', 'AdminController@cadastroCargo');
+Route::post('/tribo', 'AdminController@cadastroTribo');
+
 
 
