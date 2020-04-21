@@ -56,7 +56,7 @@
                                         <label for="name_cargo" class="field-label mt-4">Cadastro de Cargos</label>
                                         <input type="text" class="w-input" maxlength="256" name="name_cargo"
                                             data-name="Name" placeholder="" id="name_cargo" required>
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2"></form>
 
                                     <div class="w-form-done">
@@ -110,8 +110,8 @@
                                         <label for="name_tribo" class="field-label-2 mt-4">Cadastro de
                                             Tribos</label>
                                         <input type="text" class="w-input" maxlength="256" name="name_tribo"
-                                            data-name="Name 2" placeholder="" id="name_tribo">
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                            data-name="Name 2" placeholder="" id="name_tribo" required>
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2"></form>
                                     <div class="w-form-done">
                                         <div>Cadastro ok</div>
@@ -162,8 +162,8 @@
                                             Squad
                                         </label>
                                         <input type="text" class="w-input" maxlength="256" name="name_squad"
-                                            data-name="Name 2" placeholder="" id="name_squad">
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                            data-name="Name 2" placeholder="" id="name_squad" required>
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2">
                                     </form>
                                     <div class="w-form-done">
@@ -206,16 +206,16 @@
                                             custo
                                         </label>
                                         <input type="text" class="w-input" maxlength="256" name="name_centroCusto"
-                                            data-name="Name 2" placeholder="" id="name_centroCusto">
+                                            data-name="Name 2" placeholder="" id="name_centroCusto" required>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Descrição: </span>
                                             </div>
                                             <textarea name="name_descentroCusto" maxlength="300" class="form-control"
-                                                aria-label="Com textarea"></textarea>
+                                                aria-label="Com textarea" required></textarea>
                                         </div>
 
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2">
                                     </form>
                                     <div class="w-form-done">
@@ -261,8 +261,8 @@
                                             estabelecimento
                                         </label>
                                         <input type="text" class="w-input" maxlength="256" name="name_estabelecimento"
-                                            data-name="Name 2" placeholder="" id="name_estabelecimento">
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                            data-name="Name 2" placeholder="" id="name_estabelecimento" required>
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2">
                                     </form>
                                     <div class="w-form-done">
@@ -304,8 +304,8 @@
                                             Empresas
                                         </label>
                                         <input type="text" class="w-input" maxlength="256" name="name_empresa"
-                                            data-name="Name 2" placeholder="" id="name_empresa">
-                                        <input type="submit" value="Submit" data-wait="Please wait..."
+                                            data-name="Name 2" placeholder="" id="name_empresa" required>
+                                        <input type="submit" value="Incluir" data-wait="Por favor aguarde..."
                                             class="w-button mt-2 my-2">
                                     </form>
                                     <div class="w-form-done">
