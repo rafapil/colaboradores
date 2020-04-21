@@ -28,8 +28,10 @@ Route::get('/home/admin', 'AdminController@lista')->name('admin');
 // Route::get('/home/admin', 'AdminController@cadastroCargo')->name('admin');
 // Route::post('/home/admin', 'AdminController@cadastroCargo')->name('admin');
 // Rota para cadastro de gestao do funcionario
-Route::post('/cargo', 'AdminController@cadastroCargo');
-Route::post('/tribo', 'AdminController@cadastroTribo');
+Route::post('/cargo/cad', 'AdminController@cadastroCargo');
+Route::post('/tribo/cad', 'AdminController@cadastroTribo');
 
-
-
+Route::post('/squad/cad', 'AdminController@cadastroSquad'); //
+Route::post('/centocusto/cad', 'AdminController@cadastroCentroCusto'); //
+Route::post('/estabelecimento/cad', 'AdminController@cadastroEstabelecimento'); //
+Route::post('/empresa/cad', 'AdminController@cadastroEmpresa'); //
