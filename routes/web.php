@@ -29,9 +29,14 @@ Route::get('/home/admin', 'AdminController@lista')->name('admin');
 // Route::post('/home/admin', 'AdminController@cadastroCargo')->name('admin');
 // Rota para cadastro de gestao do funcionario
 Route::post('/cargo/cad', 'AdminController@cadastroCargo');
+Route::get('/cargo/del/{id}', 'AdminController@delCargo');
 Route::post('/tribo/cad', 'AdminController@cadastroTribo');
-
-Route::post('/squad/cad', 'AdminController@cadastroSquad'); //
-Route::post('/centocusto/cad', 'AdminController@cadastroCentroCusto'); //
-Route::post('/estabelecimento/cad', 'AdminController@cadastroEstabelecimento'); //
-Route::post('/empresa/cad', 'AdminController@cadastroEmpresa'); //
+Route::get('/tribo/del/{id}', 'AdminController@delTribo');
+Route::post('/squad/cad', 'AdminController@cadastroSquad');
+Route::get('/squad/del/{id}', 'AdminController@delSquad');
+Route::post('/centocusto/cad', 'AdminController@cadastroCentroCusto');
+Route::get('/centocusto/del/{id}', 'AdminController@delCusto');
+Route::post('/estabelecimento/cad', 'AdminController@cadastroEstabelecimento');
+Route::get('/estabelecimento/del/{id}', 'AdminController@delEstabelecimento');
+Route::post('/empresa/cad', 'AdminController@cadastroEmpresa');
+Route::get('/empresa/del/{id}', 'AdminController@delEmpresa');

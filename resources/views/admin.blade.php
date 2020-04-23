@@ -91,7 +91,8 @@
                                         @foreach ($cargos as $cargo)
                                         <tr>
                                             <td>{{$cargo->cargo}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/cargo/del/{{ $cargo->id }}" class="btn btn-danger">excluir</a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </table>
@@ -134,7 +135,8 @@
                                         @foreach ($tribos as $tribo)
                                         <tr>
                                             <td>{{$tribo->tribonome}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/tribo/del/{{ $tribo->id }}" class="btn btn-danger">excluir</a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </table>
@@ -187,7 +189,8 @@
                                         @foreach ($squads as $squad)
                                         <tr>
                                             <td>{{$squad->squad}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/squad/del/{{ $squad->id }}" class="btn btn-danger">excluir</a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </table>
@@ -243,7 +246,8 @@
                                         <tr>
                                             <td>{{$centrocusto->centrocusto}}</td>
                                             <td>{{$centrocusto->descentrocusto}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/centocusto/del/{{ $centrocusto->id }}"
+                                                    class="btn btn-danger">excluir</a></td>
                                         </tr>
                                         @endforeach
                                     </table>
@@ -286,7 +290,8 @@
                                         @foreach ($estabelecimentos as $estabelecimento)
                                         <tr>
                                             <td>{{$estabelecimento->desc_estabelecimento}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/estabelecimento/del/{{ $estabelecimento->id }}"
+                                                    class="btn btn-danger">excluir</a></td>
                                         </tr>
                                         @endforeach
                                     </table>
@@ -329,7 +334,8 @@
                                         @foreach ($empresas as $empresa)
                                         <tr>
                                             <td>{{$empresa->empresa}}</td>
-                                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                                            <td><a href="/empresa/del/{{ $empresa->id }}"
+                                                    class="btn btn-danger">excluir</a></td>
                                         </tr>
                                         @endforeach
                                     </table>

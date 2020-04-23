@@ -40,6 +40,13 @@ class AdminController extends Controller
         return redirect('/home/admin');
     }
 
+    public function delCargo($id)
+    {
+        $delCago = CargosModel::find($id);
+        $delCago->delete();
+        return redirect('/home/admin');
+    }
+
     public function cadastroTribo(Request $request)
     {
         if ($request->isMethod('GET')) {
@@ -50,6 +57,13 @@ class AdminController extends Controller
         $newTribo->tribonome = $request->name_tribo;
         $newTribo->save();
 
+        return redirect('/home/admin');
+    }
+
+    public function delTribo($id)
+    {
+        $delCago = TriboModel::find($id);
+        $delCago->delete();
         return redirect('/home/admin');
     }
 
@@ -67,6 +81,13 @@ class AdminController extends Controller
         return redirect('/home/admin');
     }
 
+    public function delCusto($id)
+    {
+        $delCago = CentrocustoModel::find($id);
+        $delCago->delete();
+        return redirect('/home/admin');
+    }
+
     public function cadastroEmpresa(Request $request)
     {
         if ($request->isMethod('GET')) {
@@ -77,6 +98,13 @@ class AdminController extends Controller
         $newEmpresa->empresa = $request->name_empresa;
         $newEmpresa->save();
 
+        return redirect('/home/admin');
+    }
+
+    public function delEmpresa($id)
+    {
+        $delCago = EmpresaModel::find($id);
+        $delCago->delete();
         return redirect('/home/admin');
     }
 
@@ -93,6 +121,13 @@ class AdminController extends Controller
         return redirect('/home/admin');
     }
 
+    public function delEstabelecimento($id)
+    {
+        $delCago = EstabelecimentoModel::find($id);
+        $delCago->delete();
+        return redirect('/home/admin');
+    }
+
     public function cadastroSquad(Request $request)
     {
         if ($request->isMethod('GET')) {
@@ -103,6 +138,13 @@ class AdminController extends Controller
         $newSquad->squad = $request->name_squad;
         $newSquad->save();
 
+        return redirect('/home/admin');
+    }
+
+    public function delSquad($id)
+    {
+        $delCago = SquadModel::find($id);
+        $delCago->delete();
         return redirect('/home/admin');
     }
 }
