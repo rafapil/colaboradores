@@ -14,36 +14,37 @@ class ColaboradorModel extends Model
 
     public function cargos()
     {
-        $this->hasMany("App\CargosModel", "cargos_id");
+        return $this->belongsTo(CargosModel::class, "cargos_id");
     }
 
     public function centrocusto()
     {
-        $this->hasMany("App\CentrocustoModel", "centrocusto_id");
+        return $this->belongsTo(CentrocustoModel::class, "centrocusto_id");
     }
 
     public function empresa()
     {
-        $this->hasMany("App\EmpresaModel", "empresa_id");
+        return $this->belongsTo(EmpresaModel::class, "empresa_id");
     }
 
     public function estabelecimento()
     {
-        $this->hasMany("App\EstabelecimentoModel", "estabelecimento_id");
+        return $this->hasMany(EstabelecimentoModel::class, "estabelecimento_id");
     }
 
     public function squad()
     {
-        $this->hasMany("App\SquadModel", "squad_id");
+        return $this->belongsTo(SquadModel::class, "squad_id");
     }
 
     public function tribo()
     {
-        $this->hasMany("App\TriboModel", "tribo_id");
+        return $this->belongsTo(TriboModel::class, "tribo_id");
     }
 
     public function user()
     {
-        $this->hasMany("App\User", "users_id");
+        return $this->belongsTo(User::class, "users_id");
+        // return $this->hasMany('App\User', 'id');
     }
 }

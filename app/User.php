@@ -9,7 +9,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public $table = "users";
+    public $primaryKey = "id";
+    public $timestamps = false;
+
     use Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -40,6 +45,6 @@ class User extends Authenticatable
 
     public function colaborador()
     {
-        return $this->belongsTo("App\ColaboradorModel", "id");
+        return $this->hasMany('App\ColaboradorModel', 'id');
     }
 }

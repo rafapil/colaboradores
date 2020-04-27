@@ -14,6 +14,6 @@ class CargosModel extends Model
 
     public function colaborador()
     {
-        return $this->belongsTo("App\ColaboradorModel", "id");
+        return $this->hasMany("App\ColaboradorModel", "id");
     }
 }

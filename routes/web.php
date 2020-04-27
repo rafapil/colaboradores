@@ -18,9 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('usuarios', function () {
+//     return view('usuarios');
+// });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/usuarios', 'UsuarioController@lista')->name('usuarios');
+Route::post('/usuarios/cad', 'UsuarioController@create'); // funciona normal eu que fiz besteira sem usar a criptografia
+Route::post('/user/cad', 'UsuarioController@create');
 
 // rotas para funçoes adm v1
 
