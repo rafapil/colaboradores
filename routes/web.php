@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/calendario', function () {
+    return view('calendario');
+});
+
 // Route::get('usuarios', function () {
 //     return view('usuarios');
 // });
@@ -29,6 +33,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/usuarios', 'UsuarioController@lista')->name('usuarios');
 Route::post('/usuarios/cad', 'UsuarioController@create'); // funciona normal eu que fiz besteira sem usar a criptografia
 Route::post('/user/cad', 'UsuarioController@create');
+
+
+// Route::get('/plantao', function () {
+//     return view('plantao');
+// });
+
+Route::resource('plantao', 'plantaoController');
 
 // rotas para funçoes adm v1
 

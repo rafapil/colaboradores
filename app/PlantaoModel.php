@@ -12,8 +12,8 @@ class PlantaoModel extends Model
     public $timestamps = false;
     public $guarded = [];
 
-    // public function colaborador()
-    // {
-    //     return $this->belongsTo("App\ColaboradorModel", "id");
-    // }
+    public function colaborador()
+    {
+        return $this->belongsTo(ColaboradorModel::class, "id");
+    }
 }

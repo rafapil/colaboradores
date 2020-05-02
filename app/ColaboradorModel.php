@@ -47,4 +47,9 @@ class ColaboradorModel extends Model
         return $this->belongsTo(User::class, "users_id");
         // return $this->hasMany('App\User', 'id');
     }
+
+    public function plantao()
+    {
+        return $this->hasMany("App\PlantaoModel", "id");
+    }
 }
