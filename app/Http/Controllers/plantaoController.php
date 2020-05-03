@@ -7,7 +7,7 @@ use App\ColaboradorModel;
 use App\PlantaoModel;
 use Illuminate\Http\Request;
 
-class plantaoController extends Controller
+class PlantaoController extends Controller
 
 {
 
@@ -58,6 +58,24 @@ class plantaoController extends Controller
     }
 
     /**
+     * Metodo para inserir os dados criado a parte devido as particularidades da controller.
+     *
+     *
+     * **/
+    public function insert(Request $request)
+    {
+        $newPlantao = new PlantaoModel();
+        $newPlantao->datainicio = $request->inputIncioP;
+        $newPlantao->datafim = $request->inputFimP;
+        $newPlantao->obs = $request->name_observacao;
+        $newPlantao->colaborador_id = $request->inputColaborador;
+        $newPlantao->save();
+
+        return redirect('/plantao');
+    }
+
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -100,5 +118,14 @@ class plantaoController extends Controller
     public function destroy($id)
     {
         //
+        // return "Voce pediu para destruir: " . $id;
+    }
+
+    public function delete($id)
+    {
+
+        $delPlantao = PlantaoModel::find($id);
+        $delPlantao->delete();
+        return redirect('/plantao');
     }
 }

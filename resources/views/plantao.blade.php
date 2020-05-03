@@ -41,12 +41,12 @@
                         </div>
                     </form>
                     {{-- Divisao de formularios para executar busca e cadastro de plantao  --}}
-                    <form class="w-form" method="POST" action="#">
+                    <form class="w-form" method="POST" action="/insert">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputTribo">Colaborador</label>
-                                <select id="inputTribo" name="inputTribo" class="form-control">
+                                <select id="inputColaborador" name="inputColaborador" class="form-control">
                                     <option selected>Escolher...</option>
                                     @foreach ($colaboradores as $colaborador)
                                     <option value="{{$colaborador->id}}">{{$colaborador->user->name}}</option>
@@ -71,7 +71,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Observação: </span>
                                 </div>
-                                <textarea name="name_descentroCusto" maxlength="300" class="form-control"
+                                <textarea name="name_observacao" maxlength="300" class="form-control"
                                     aria-label="Com textarea" required></textarea>
                             </div>
 
@@ -112,12 +112,12 @@
                         </thead>
                         @foreach ($plantoes as $plantao)
                         <tr>
-                            <td>{{$plantao->colaborador->user->name}}</td>
-                            <td>{{$plantao->colaborador->squad->squad}}</td>
+                            {{-- <td>{{$plantao->colaborador->user->name}}</td>
+                            <td>{{$plantao->colaborador->squad->squad}}</td> --}}
                             <td>{{$plantao->datainicio}}</td>
                             <td>{{$plantao->datafim}}</td>
                             {{-- <td>{{$plantao->squad->squad}}</td> --}}
-                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                            <td><a href="/delete/plantao/{{$plantao->id}}" class="btn btn-danger">excluir</a></td>
                         </tr>
                         @endforeach
                     </table>

@@ -50,6 +50,7 @@ class ColaboradorModel extends Model
 
     public function plantao()
     {
+        //return $this->hasMany("App\PlantaoModel", "id");
         return $this->hasMany("App\PlantaoModel", "id");
     }
 }

@@ -39,13 +39,13 @@ Route::post('/user/cad', 'UsuarioController@create');
 //     return view('plantao');
 // });
 
-Route::resource('plantao', 'plantaoController');
+Route::resource('plantao', 'PlantaoController');
+Route::post('/insert', 'PlantaoController@insert');
+Route::get('/delete/plantao/{id}', 'PlantaoController@delete');
 
 // rotas para funçoes adm v1
 
 Route::get('/home/admin', 'AdminController@lista')->name('admin');
-// Route::get('/home/admin', 'AdminController@cadastroCargo')->name('admin');
-// Route::post('/home/admin', 'AdminController@cadastroCargo')->name('admin');
 // Rota para cadastro de gestao do funcionario
 Route::post('/cargo/cad', 'AdminController@cadastroCargo');
 Route::get('/cargo/del/{id}', 'AdminController@delCargo');
