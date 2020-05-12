@@ -35,7 +35,8 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <button type="submit" class="btn btn-primary mt-4">Buscar colaboradores</button>
+                                <button type="submit" class="btn btn-primary mt-4">Buscar
+                                    colaboradores</button>
                             </div>
 
                         </div>
@@ -131,5 +132,7 @@
         </div>
     </div>
 </div>
+
+
 
 @endsection

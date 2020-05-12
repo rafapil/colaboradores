@@ -97,7 +97,6 @@
     <script src="{{ asset('js/daygrid/main.js') }}"></script>
 
 
-
 </body>
 
 </html>
