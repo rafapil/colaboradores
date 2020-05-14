@@ -93,6 +93,7 @@
     <script src="{{ asset('js/tabs.js') }}" defer></script>
 
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/locales-all.js') }}"></script>
     <script src="{{ asset('js/interaction/main.js') }}"></script>
     <script src="{{ asset('js/daygrid/main.js') }}"></script>
 

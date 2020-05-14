@@ -16,6 +16,7 @@
         center: 'title',
         right: 'dayGridMonth,dayGridWeek,dayGridDay'
       },
+      locale: 'pt-br',
       defaultDate: '2020-02-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
@@ -23,7 +24,8 @@
       events: [
         {
           title: 'All Day Event',
-          start: '2020-02-01'
+          start: '2020-05-14T10:00:00',
+          end: '2020-05-14T22:00:00'
         },
         {
           title: 'Long Event',
