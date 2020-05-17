@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\SquadModel;
 use App\ColaboradorModel;
 use App\PlantaoModel;
+use App\EscalaPlantaoModel;
 use Illuminate\Http\Request;
 
 class PlantaoController extends Controller
@@ -22,8 +23,10 @@ class PlantaoController extends Controller
     {
         //
         $squads = SquadModel::all();
-        $plantoes = PlantaoModel::all();
-        $colaboradores = ColaboradorModel::where('squad_id', '=', '0')->get();
+        $plantoes = EscalaPlantaoModel::paginate(5);
+
+        //$colaboradores = ColaboradorModel::where('squad_id', '=', '0')->get();
+        $colaboradores = ColaboradorModel::all();
 
         return view('plantao', compact('squads', 'colaboradores', 'plantoes'));
     }
@@ -48,11 +51,14 @@ class PlantaoController extends Controller
     {
         // aqui fazer os ajustes para pegar do metodo get o id da squad para usar no where do colaborador.
         // Era pra fazer em show mas o ip vai errado entao vai aqui mesmo
+        // lembre que por usar o filtro a partir do eloquent o where deve ficar abaixo da função que chama o filtro ou tera erro.
 
         $squads = SquadModel::all();
-        $plantoes = PlantaoModel::all();
+        //$plantoes = EscalaPlantaoModel::paginate(5);
+
         $squad = $request->inputName;
         $colaboradores = ColaboradorModel::where('squad_id', '=', $squad)->get();
+        $plantoes = EscalaPlantaoModel::where('squad_id', '=', $squad)->paginate(5);
 
         return view('plantao', compact('colaboradores', 'squads', 'plantoes'));
     }

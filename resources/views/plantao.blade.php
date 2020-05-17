@@ -24,7 +24,7 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputName">Squad do colaborador</label>
+                                <label for="inputName">Selecione a Squad</label>
                                 <select name="inputName" id="inputName" class="form-control">
                                     <option selected>Selecione um nome...</option>
                                     {{-- <option>...</option> --}}
@@ -34,7 +34,7 @@
 
                                 </select>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-4">
                                 <button type="submit" class="btn btn-primary mt-4">Buscar
                                     colaboradores</button>
                             </div>
@@ -97,9 +97,9 @@
                                 <td>
                                     <h5 class="field-label-6">Colaborador</h5>
                                 </td>
-                                <td>
+                                {{-- <td>
                                     <h5 class="field-label-6">Squad</h5>
-                                </td>
+                                </td> --}}
                                 <td>
                                     <h5 class="field-label-6">Inicio plantão</h5>
                                 </td>
@@ -114,7 +114,11 @@
                         @foreach ($plantoes as $plantao)
                         <tr>
                             {{-- <td>{{$plantao->colaborador->user->name}}</td>
-                            <td>{{$plantao->colaborador->squad->squad}}</td> --}}
+                            <td>{{$plantao->colaborador->squad->squad}}</td>
+                            <td>{{$plantao->datainicio}}</td>
+                            <td>{{$plantao->datafim}}</td> --}}
+                            <td>{{$plantao->name}}</td>
+                            {{-- <td>{{$plantao->squad}}</td> --}}
                             <td>{{$plantao->datainicio}}</td>
                             <td>{{$plantao->datafim}}</td>
                             {{-- <td>{{$plantao->squad->squad}}</td> --}}

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('default');
 });
 
 Route::get('/calendario', function () {
@@ -35,9 +35,8 @@ Route::post('/usuarios/cad', 'UsuarioController@create'); // funciona normal eu 
 Route::post('/user/cad', 'UsuarioController@create');
 
 
-// Route::get('/plantao', function () {
-//     return view('plantao');
-// });
+Route::resource('/usuario', 'UsuarioPessoalController');
+//Route::put('/usuario/update', 'UsuarioPessoalController@update');
 
 Route::resource('plantao', 'PlantaoController');
 Route::post('/insert', 'PlantaoController@insert');
