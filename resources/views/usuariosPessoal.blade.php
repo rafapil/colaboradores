@@ -21,8 +21,19 @@
                 <div class="container w-container">
                     <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
 
-                    <form class="w-form" method="POST" action="/user/cad">
-                        @csrf
+                    <!-- Usar um if para alternar o mesmo form e botao com caracteristicas diferentes -->
+                    @if (@isset($colaboradores) && count($colaboradores) > 0)
+                        <!-- Neste bloco realizar a chamada para update o else sera o padrao para cadastro inicial pelo usuario  -->
+                        @foreach ($colaboradores as $colaboradore)
+                            <form method="POST" action="/usuario/{{$colaboradore->id}}">
+                        @endforeach
+                        @method('put')
+                        {{-- @csrf --}}
+                        @else
+                        <!-- Cadastro default -->
+                        <form class="w-form" method="POST" action="/user/cad">
+                    @endif
+                    @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputName">Nome colaborador</label>
@@ -164,14 +175,10 @@
 
                         <button type="submit" class="btn btn-primary">Finalizar cadastro</button>
                     </form>
-                    @foreach ($colaboradores as $colaboradore)
-                    <form action="/usuario/{{$colaboradore->id}}">
-                        @endforeach
-                        {{-- @method('put') --}}
-                        {{-- @csrf --}}
 
-                        <button type="submit" class="btn btn-primary">Realizar atualização</button>
-                    </form>
+
+                       {{-- <button type="submit" class="btn btn-primary">Realizar atualização NOP</button> -}}
+
 
                     <div class="w-form-done">
                         <div>Cadastro ok</div>
