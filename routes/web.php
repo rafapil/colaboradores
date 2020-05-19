@@ -36,14 +36,14 @@ Route::post('/user/cad', 'UsuarioController@create');
 
 
 Route::resource('/usuario', 'UsuarioPessoalController');
-//Route::put('/usuario/update', 'UsuarioPessoalController@update');
+
+Route::resource('/colaborador', 'ColaboradorController');
 
 Route::resource('plantao', 'PlantaoController');
 Route::post('/insert', 'PlantaoController@insert');
 Route::get('/delete/plantao/{id}', 'PlantaoController@delete');
 
 // rotas para funçoes adm v1
-
 Route::get('/home/admin', 'AdminController@lista')->name('admin');
 // Rota para cadastro de gestao do funcionario
 Route::post('/cargo/cad', 'AdminController@cadastroCargo');

@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //return view('home');
+        // colocamos o direcionamento para usuário dessa forma forçamos todos a conferirem as suas informações
+        return redirect('/usuario');
     }
 }

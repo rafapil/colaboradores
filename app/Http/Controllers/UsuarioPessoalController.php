@@ -66,10 +66,19 @@ class UsuarioPessoalController extends Controller
     public function create(Request $request)
     {
         //
-        if ($request->isMethod('GET')) {
-            return view('usuariosPessoal');
-        }
 
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
         $newColaborador = new ColaboradorModel();
         $newColaborador->macricula = $request->inputMatricula;
         $newColaborador->data_adm = $request->inputAdmissao;
@@ -87,17 +96,6 @@ class UsuarioPessoalController extends Controller
 
         $newColaborador->save();
         return redirect('/usuario');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
