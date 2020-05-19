@@ -12,6 +12,8 @@
 
     <div class="content container">
         <h3>Painel de controle</h3>
+        @foreach ($adms as $adm)
+
 
 
         <div class="links">
@@ -22,9 +24,14 @@
 
             <a href="https://laravel-news.com">Controle de Usuario</a>
 
-            {{-- Somente super admin ver como acessar --}}
+            {{-- Somente super admin ver como acessar   {{Auth::user()->adm}} == 3  --}}
+            @if ( $adm.value == '3' )
             <a href="https://nova.laravel.com">Admin</a>
+            @endif
+
             {{-- Esse cara tera acesso a parte de gestão empresa --}}
+
+            @endforeach
 
         </div>
 

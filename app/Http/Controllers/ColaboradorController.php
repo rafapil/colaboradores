@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
+
+use App\User;
 
 class ColaboradorController extends Controller
 {
@@ -14,7 +17,10 @@ class ColaboradorController extends Controller
     public function index()
     {
         //
-        return view('colaborador');
+        $id = Auth::id();
+        $adms = User::where('id', '=', $id)->get('adm');
+        //
+        return view('colaborador', compact('adms'));
     }
 
     /**
