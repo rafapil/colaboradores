@@ -2,30 +2,33 @@
 
 @section('content')
 
-<div class="">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="flex-center position-ref full-height">
 
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+    </div>
+    @endif
 
-                    {{-- Voce esta logado --}}
-                    <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
-
-                    <div class="container w-container">
+    <div class="content container">
+        <h3>Painel de controle</h3>
 
 
-                    </div>
+        <div class="links">
+            <a href="https://laravel.com/docs">Escala de Plantão</a>
+            <a href="https://blog.laravel.com">Cadastro Plantão</a>
+            <a href="https://laracasts.com">Dados Pessoais</a>
+            {{-- Essa vai ser para admin --}}
 
-                </div>
-            </div>
+            <a href="https://laravel-news.com">Controle de Usuario</a>
+
+            {{-- Somente super admin ver como acessar --}}
+            <a href="https://nova.laravel.com">Admin</a>
+            {{-- Esse cara tera acesso a parte de gestão empresa --}}
+
         </div>
+
     </div>
 </div>
+
 @endsection
