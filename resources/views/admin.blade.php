@@ -48,11 +48,16 @@
                                 <div>Empresa</div>
                             </a>
                             <!-- Usar a mesma regra de if para mostrar apenas se este for o admin -->
+                            @if ($adms[0]->adm == 3)
+
                             <a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="6"
-                                id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
-                                aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
-                                <div>Admin</div>
-                            </a>
+                            id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
+                            aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
+                            <div>Admin</div>
+                        </a>
+
+                            @endif
+
 
                             <!-- Deste ponto em diante é feito os menus e inputs de iteracao com o usuario -->
                         </div>

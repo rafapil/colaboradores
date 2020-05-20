@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\CargosModel;
@@ -11,6 +12,8 @@ use App\EmpresaModel;
 use App\EstabelecimentoModel;
 // use App\PlantaoModel; nao sera tratado neste contexto
 use App\SquadModel;
+
+use App\User;
 
 class AdminController extends Controller
 {
@@ -27,6 +30,9 @@ class AdminController extends Controller
 
     public function lista()
     {
+        $id = Auth::id();
+        $adms = User::where('id', '=', $id)->get('adm');
+
         $cargos = CargosModel::all();
         $tribos = TriboModel::all();
         $centrocustos = CentrocustoModel::all();
@@ -34,7 +40,7 @@ class AdminController extends Controller
         $estabelecimentos = EstabelecimentoModel::all();
         $squads = SquadModel::all();
 
-        return view('admin', compact('cargos', 'tribos', 'centrocustos', 'empresas', 'estabelecimentos', 'squads'));
+        return view('admin', compact('cargos', 'tribos', 'centrocustos', 'empresas', 'estabelecimentos', 'squads',"adms"));
     }
 
     public function cadastroCargo(Request $request)
