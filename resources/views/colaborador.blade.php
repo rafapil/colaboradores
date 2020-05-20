@@ -21,11 +21,11 @@
             <a href="https://blog.laravel.com">Cadastro Plantão</a>
             <a href="https://laracasts.com">Dados Pessoais</a>
             {{-- Essa vai ser para admin --}}
-
+            @if ( $adm->adm == 1 || $adm->adm == 3 )
             <a href="https://laravel-news.com">Controle de Usuario</a>
-
-            {{-- Somente super admin ver como acessar   {{Auth::user()->adm}} == 3  --}}
-            @if ( $adm.value == '3' )
+            @endif
+            {{-- Somente super admin ver como acessar --}}
+            @if ( $adm->adm == 3 )
             <a href="https://nova.laravel.com">Admin</a>
             @endif
 
