@@ -26,27 +26,36 @@
                                 href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
                                 aria-selected="true">
                                 <div>Cargos</div>
-                            </a><a data-w-tab="Tribos" class="w-inline-block w-tab-link" tabindex="-1"
+                            </a><a data-w-tab="Tribos" class="w-inline-block w-tab-link" tabindex="1"
                                 id="w-tabs-0-data-w-tab-1" href="#w-tabs-0-data-w-pane-1" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-1" aria-selected="false">
                                 <div>Tribos</div>
-                            </a><a data-w-tab="Squad" class="w-inline-block w-tab-link" tabindex="-1"
+                            </a><a data-w-tab="Squad" class="w-inline-block w-tab-link" tabindex="2"
                                 id="w-tabs-0-data-w-tab-2" href="#w-tabs-0-data-w-pane-2" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-2" aria-selected="false">
                                 <div>Squad</div>
-                            </a><a data-w-tab="Centro de Custo" class="w-inline-block w-tab-link" tabindex="-1"
+                            </a><a data-w-tab="Centro de Custo" class="w-inline-block w-tab-link" tabindex="3"
                                 id="w-tabs-0-data-w-tab-3" href="#w-tabs-0-data-w-pane-3" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-3" aria-selected="false">
                                 <div>Centro de Custo</div>
-                            </a><a data-w-tab="Estabelecimento" class="w-inline-block w-tab-link" tabindex="-1"
+                            </a><a data-w-tab="Estabelecimento" class="w-inline-block w-tab-link" tabindex="4"
                                 id="w-tabs-0-data-w-tab-4" href="#w-tabs-0-data-w-pane-4" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-4" aria-selected="false">
                                 <div>Estabelecimento</div>
-                            </a><a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="-1"
+                            </a><a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="5"
                                 id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
                                 <div>Empresa</div>
-                            </a></div>
+                            </a>
+                            <!-- Usar a mesma regra de if para mostrar apenas se este for o admin -->
+                            <a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="6"
+                                id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
+                                aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
+                                <div>Admin</div>
+                            </a>
+
+                            <!-- Deste ponto em diante é feito os menus e inputs de iteracao com o usuario -->
+                        </div>
                         <div class="w-tab-content">
                             <div data-w-tab="Cargos" class="w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0"
                                 role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0">
