@@ -109,7 +109,11 @@
                                     <h5 class="field-label-6">Termino plantão</h5>
                                 </td>
                                 <td>
+                                    @if ( Auth::user()->adm == 1 || Auth::user()->adm == 3 )
                                     <h5 class="field-label-6">Ações</h5>
+                                    @else
+                                    {{-- Nenhuma opcao apresentada --}}
+                                    @endif
                                 </td>
                             </tr>
                         </thead>
@@ -124,7 +128,14 @@
                             <td>{{$plantao->datainicio}}</td>
                             <td>{{$plantao->datafim}}</td>
                             {{-- <td>{{$plantao->squad->squad}}</td> --}}
-                            <td><a href="/delete/plantao/{{$plantao->id}}" class="btn btn-danger">excluir</a></td>
+                            <td>
+                                @if ( Auth::user()->adm == 1 || Auth::user()->adm == 3 )
+                                <a href="/delete/plantao/{{$plantao->id}}" class="btn btn-danger">excluir</a>
+                                @else
+                                {{-- Nenhuma opcao apresentada --}}
+                                @endif
+
+                            </td>
                         </tr>
                         @endforeach
                     </table>

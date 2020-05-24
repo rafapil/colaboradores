@@ -9,6 +9,16 @@ use App\EscalaPlantaoModel;
 class EscalaPlantaoController extends Controller
 {
     /**
+     * Criando instancia administradora das funçoes da empresa.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

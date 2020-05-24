@@ -34,7 +34,7 @@ Route::get('/usuarios', 'UsuarioController@lista')->name('usuarios');
 Route::post('/usuarios/cad', 'UsuarioController@create'); // funciona normal eu que fiz besteira sem usar a criptografia
 Route::get('/usuarios/delete/{id}', 'UsuarioController@delete');
 
-Route::resource('/gestao', 'GestaoController');
+Route::resource('/gestao', 'GestaoController')->middleware('checkSuperAdmin');
 
 Route::resource('/usuario', 'UsuarioPessoalController');
 
@@ -47,7 +47,7 @@ Route::post('/insert', 'PlantaoController@insert');
 Route::get('/delete/plantao/{id}', 'PlantaoController@delete');
 
 // rotas para funçoes adm v1
-Route::get('/home/admin', 'AdminController@lista')->name('admin');
+Route::get('/home/admin', 'AdminController@lista')->name('admin')->middleware('checkAdmin');
 // Rota para cadastro de gestao do funcionario
 Route::post('/cargo/cad', 'AdminController@cadastroCargo');
 Route::get('/cargo/del/{id}', 'AdminController@delCargo');

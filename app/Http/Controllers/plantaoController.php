@@ -12,6 +12,15 @@ class PlantaoController extends Controller
 
 {
 
+    /**
+     * Criando instancia administradora das funçoes da empresa.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
 
     /**
