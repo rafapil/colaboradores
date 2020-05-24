@@ -6,9 +6,11 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card w-container">
-            <div class="card-header">Controle de plantão</div>
+            <div class="card-header">
+                <h5>Controle de plantão</h5>
+            </div>
 
-            <div class="card-body">
+            <div class="card-body bg-dark">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -17,7 +19,7 @@
 
                 {{-- Voce esta logado --}}
 
-                <div class="container w-container">
+                <div class="container w-container bg-dark text-light">
                     <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
 
                     <form class="w-form" method="POST">
@@ -35,7 +37,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
-                                <button type="submit" class="btn btn-primary mt-4">Buscar
+                                <button type="submit" class="btn btn-secondary mt-4">Buscar
                                     colaboradores</button>
                             </div>
 
@@ -91,7 +93,7 @@
                         <div>Oops! Ocorroreu algum erro.</div>
                     </div>
                     @if(@isset($plantoes) && count($plantoes) > 0)
-                    <table class="table">
+                    <table class="table table-striped table-dark">
                         <thead>
                             <tr>
                                 <td>

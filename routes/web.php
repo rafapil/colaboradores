@@ -39,6 +39,8 @@ Route::resource('/usuario', 'UsuarioPessoalController');
 
 Route::resource('/colaborador', 'ColaboradorController');
 
+Route::resource('escala', 'EscalaPlantaoController');
+
 Route::resource('plantao', 'PlantaoController');
 Route::post('/insert', 'PlantaoController@insert');
 Route::get('/delete/plantao/{id}', 'PlantaoController@delete');

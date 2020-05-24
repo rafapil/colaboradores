@@ -10,13 +10,14 @@
     </div>
     @endif
 
-    <div class="container">
+    <div class="container text-light">
         <h3>Painel de controle</h3>
         @foreach ($adms as $adm)
 
 
         <ul class="list-group col-md-8 my-4">
-            <li class="list-group-item active"><a href="#" class="text-decoration-none text-dark">Escala de Plantão</a>
+            <li class="list-group-item active"><a href="/escala" class="text-decoration-none text-dark">Escala de
+                    Plantão</a>
             </li>
             <li class="list-group-item"><a href="/plantao" class="text-decoration-none text-dark">Cadastro
                     Plantão</a></li>

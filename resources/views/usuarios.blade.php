@@ -6,10 +6,12 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <div class="card w-container">
-            <div class="card-header">Controle dos colaboradores</div>
+        <div class="card w-container ">
+            <div class="card-header">
+                <h5>Controle dos colaboradores</h5>
+            </div>
 
-            <div class="card-body">
+            <div class="card-body text-light bg-dark">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -18,7 +20,7 @@
 
                 {{-- Voce esta logado --}}
 
-                <div class="container w-container">
+                <div class="container w-container text-light bg-dark">
                     <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
 
                     <form class="w-form" method="POST" action="/user/cad">
@@ -168,7 +170,7 @@
                         <div>Oops! Ocorroreu algum erro.</div>
                     </div>
                     @if(@isset($colaboradores) && count($colaboradores) > 0)
-                    <table class="table">
+                    <table class="table table-striped table-dark">
                         <thead>
                             <tr>
                                 <td>

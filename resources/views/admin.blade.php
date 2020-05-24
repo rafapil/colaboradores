@@ -6,43 +6,42 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card w-container">
-            <div class="card-header">Dashboard - Admnistrativo</div>
+            <div class="card-header">
+                <h5>Gerenciamento Empresarial</h5>
+            </div>
 
-            <div class="card-body">
+            <div class="card-body bg-dark text-light">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
                 @endif
 
-                You are logged in!
-                <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
-
                 <div class="container w-container">
-                    <div class="text-block">Gerenciamento Empresarial</div>
+                    {{-- <div class="text-block">Gerenciamento Empresarial</div> --}}
                     <div data-duration-in="300" data-duration-out="100" class="w-tabs">
                         <div class="w-tab-menu" role="tablist"><a data-w-tab="Cargos"
-                                class="w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0"
+                                class="w-inline-block w-tab-link mt-1 w--current" id="w-tabs-0-data-w-tab-0"
                                 href="#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
                                 aria-selected="true">
                                 <div>Cargos</div>
-                            </a><a data-w-tab="Tribos" class="w-inline-block w-tab-link" tabindex="1"
+                            </a><a data-w-tab="Tribos" class="w-inline-block w-tab-link mt-1" tabindex="1"
                                 id="w-tabs-0-data-w-tab-1" href="#w-tabs-0-data-w-pane-1" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-1" aria-selected="false">
                                 <div>Tribos</div>
-                            </a><a data-w-tab="Squad" class="w-inline-block w-tab-link" tabindex="2"
+                            </a><a data-w-tab="Squad" class="w-inline-block w-tab-link mt-1" tabindex="2"
                                 id="w-tabs-0-data-w-tab-2" href="#w-tabs-0-data-w-pane-2" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-2" aria-selected="false">
                                 <div>Squad</div>
-                            </a><a data-w-tab="Centro de Custo" class="w-inline-block w-tab-link" tabindex="3"
+                            </a><a data-w-tab="Centro de Custo" class="w-inline-block w-tab-link mt-1" tabindex="3"
                                 id="w-tabs-0-data-w-tab-3" href="#w-tabs-0-data-w-pane-3" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-3" aria-selected="false">
                                 <div>Centro de Custo</div>
-                            </a><a data-w-tab="Estabelecimento" class="w-inline-block w-tab-link" tabindex="4"
+                            </a><a data-w-tab="Estabelecimento" class="w-inline-block w-tab-link mt-1" tabindex="4"
                                 id="w-tabs-0-data-w-tab-4" href="#w-tabs-0-data-w-pane-4" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-4" aria-selected="false">
                                 <div>Estabelecimento</div>
-                            </a><a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="5"
+                            </a><a data-w-tab="Empresa" class="w-inline-block w-tab-link mt-1" tabindex="5"
                                 id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
                                 <div>Empresa</div>
@@ -50,11 +49,11 @@
                             <!-- Usar a mesma regra de if para mostrar apenas se este for o admin -->
                             @if ($adms[0]->adm == 3)
 
-                            <a data-w-tab="Empresa" class="w-inline-block w-tab-link" tabindex="6"
-                            id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
-                            aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
-                            <div>Admin</div>
-                        </a>
+                            <a data-w-tab="Empresa" class="w-inline-block w-tab-link mt-1" tabindex="6"
+                                id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
+                                aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
+                                <div>Admin</div>
+                            </a>
 
                             @endif
 
@@ -91,7 +90,7 @@
 
                                     </ul> --}}
                                     @if(isset($cargos) && count($cargos) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -135,7 +134,7 @@
                                         <div>Oops! Ocorroreu algum erro.</div>
                                     </div>
                                     @if(@isset($tribos)&& count($tribos) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -189,7 +188,7 @@
                                         <div>Oops! Ocorroreu algum erro.</div>
                                     </div>
                                     @if(@isset($squads)&& count($squads) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -242,7 +241,7 @@
                                         <div>Oops! Ocorroreu algum erro.</div>
                                     </div>
                                     @if(@isset($centrocustos)&& count($centrocustos) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -290,7 +289,7 @@
                                         <div>Oops! Ocorroreu algum erro.</div>
                                     </div>
                                     @if(@isset($estabelecimentos) && count($estabelecimentos) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -334,7 +333,7 @@
                                         <div>Oops! Ocorroreu algum erro.</div>
                                     </div>
                                     @if(@isset($empresas) && count($empresas) > 0)
-                                    <table class="table">
+                                    <table class="table table-striped table-dark">
                                         <thead>
                                             <tr>
                                                 <td>

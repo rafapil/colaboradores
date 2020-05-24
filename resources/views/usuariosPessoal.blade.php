@@ -7,9 +7,11 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card w-container">
-            <div class="card-header">Controle do colaborador</div>
+            <div class="card-header">
+                <h5>Controle do colaborador</h5>
+            </div>
 
-            <div class="card-body">
+            <div class="card-body bg-dark text-light">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -18,7 +20,7 @@
 
                 {{-- Voce esta logado --}}
 
-                <div class="container w-container">
+                <div class="container w-container bg-dark text-light">
                     <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
 
                     <!-- Usar um if para alternar o mesmo form e botao com caracteristicas diferentes -->
@@ -188,7 +190,7 @@
 
 
                             <button type="submit" class="btn btn-primary">Finalizar cadastro ou atualizar</button>
-                            <a href="/colaborador" class="btn btn-outline-dark">Ir para o painel de controle</a>
+                            <a href="/colaborador" class="btn btn-secondary">Ir para o painel de controle</a>
                         </form>
 
 
