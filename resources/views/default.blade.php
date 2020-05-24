@@ -41,7 +41,7 @@
             Controle de Plantões
         </span>
         <footer class="text-light justify-content-end">
-            <h6>Desenvolvido por: Agencia Filgs - Rafael Filgueiras</h6>
+            <p id="prod">Desenvolvido por: Agencia Filgs - Rafael Filgueiras</p>
         </footer>
     </div>
 

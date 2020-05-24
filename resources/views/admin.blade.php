@@ -49,9 +49,9 @@
                             <!-- Usar a mesma regra de if para mostrar apenas se este for o admin -->
                             @if ($adms[0]->adm == 3)
 
-                            <a data-w-tab="Empresa" class="w-inline-block w-tab-link mt-1" tabindex="6"
-                                id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab"
-                                aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
+                            <a data-w-tab="Admin" class="w-inline-block w-tab-link mt-1" tabindex="6"
+                                id="w-tabs-0-data-w-tab-6" href="#w-tabs-0-data-w-pane-6" role="tab"
+                                aria-controls="w-tabs-0-data-w-pane-6" aria-selected="false">
                                 <div>Admin</div>
                             </a>
 
@@ -357,13 +357,33 @@
                                     @endif
                                 </div>
                             </div>
+
+                            {{-- somente admin master --}}
+
+                            <div data-w-tab="Admin" class="w-tab-pane" id="w-tabs-0-data-w-pane-6" role="tabpanel"
+                                aria-labelledby="w-tabs-0-data-w-tab-6">
+                                <div class="w-form">
+
+
+                                    <h5 class="my-2">Gestão de usuários | Administração da Ferramenta</h5>
+                                    <a href="/gestao" class="btn btn-secondary mt-4">Abrir a pagina de Edição de
+                                        usuarios</a>
+                                    @csrf
+
+
+
+
+
+
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-@endsection
+    @endsection

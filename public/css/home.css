@@ -4,6 +4,11 @@ body {
     overflow: hidden;
 }
 
+p#prod {
+    margin-top: 18%;
+    font-size: 0.7rem;
+}
+
 #stars {
     width: 1px;
     height: 1px;

@@ -27,7 +27,7 @@
 
 <body class="bg-dark">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm border-bottom border-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Colaboradores

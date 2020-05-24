@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -39,8 +40,9 @@ class AdminController extends Controller
         $empresas = EmpresaModel::all();
         $estabelecimentos = EstabelecimentoModel::all();
         $squads = SquadModel::all();
+        //$usuarios = User::all();
 
-        return view('admin', compact('cargos', 'tribos', 'centrocustos', 'empresas', 'estabelecimentos', 'squads',"adms"));
+        return view('admin', compact('cargos', 'tribos', 'centrocustos', 'empresas', 'estabelecimentos', 'squads', 'adms'));
     }
 
     public function cadastroCargo(Request $request)
@@ -162,5 +164,14 @@ class AdminController extends Controller
         $delCago = SquadModel::find($id);
         $delCago->delete();
         return redirect('/home/admin');
+    }
+
+    public function adminFind(Request $request)
+    {
+
+        $nameID = $request->inputUser;
+        $colaboradores = User::find($nameID);
+
+        return redirect('/home/admin', compact('colaboradores'));
     }
 }

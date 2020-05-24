@@ -19,7 +19,7 @@ class UsuarioController extends Controller
     public function lista()
     {
 
-        $colaboradores = ColaboradorModel::all();
+        $colaboradores = ColaboradorModel::paginate(10);
         $tribos = TriboModel::all();
         $users = User::all();
         $squads = SquadModel::all();
@@ -53,6 +53,13 @@ class UsuarioController extends Controller
         $newColaborador->users_id = $request->inputName;
 
         $newColaborador->save();
+        return redirect('/usuarios');
+    }
+
+    public function delete($id)
+    {
+        $deleteColaborador = ColaboradorModel::find($id);
+        $deleteColaborador->delete();
         return redirect('/usuarios');
     }
 }

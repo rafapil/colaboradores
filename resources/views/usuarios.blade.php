@@ -23,7 +23,7 @@
                 <div class="container w-container text-light bg-dark">
                     <!-- Aqui vamos adicionar o conteúdo que a gente fez de cadastro e que Deus ajude! -->
 
-                    <form class="w-form" method="POST" action="/user/cad">
+                    <form class="w-form" method="POST" action="/usuarios/cad">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -126,40 +126,6 @@
                             </div>
                         </div>
 
-                        {{-- <div class="form-group">
-                            <label for="inputAddress">Endereço</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress2">Endereço 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputCity">Cidade</label>
-                                <input type="text" class="form-control" id="inputCity">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputEstado">Estado</label>
-                                <select id="inputEstado" class="form-control">
-                                    <option selected>Escolher...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="inputCEP">CEP</label>
-                                <input type="text" class="form-control" id="inputCEP">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Clique em mim
-                                </label>
-                            </div>
-                        </div> --}}
-
                         <button type="submit" class="btn btn-primary">Finalizar cadastro</button>
                     </form>
 
@@ -196,7 +162,8 @@
                             <td>{{$colaboradore->macricula}}</td>
                             <td>{{$colaboradore->tribo->tribonome}}</td>
                             <td>{{$colaboradore->squad->squad}}</td>
-                            <td><a href="#" class="btn btn-danger">excluir</a></td>
+                            <td><a href="/usuarios/delete/{{$colaboradore->id}}" class="btn btn-danger">
+                                    excluir</a></td>
                         </tr>
                         @endforeach
                     </table>
