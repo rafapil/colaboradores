@@ -28,7 +28,7 @@
     <li><img src="https://raw.githubusercontent.com/rafapil/Imagens/master/colaboradores/final.png" alt="Pagina inicial"></li>
 </ul>
 
-## About Laravel
+## About Colaboradores
 
 Esse projeto foi uma iniciativa para que qualquer pequeno grupo de pessoas que trabalham com plantões possam lançar o inicio e fim de seus atendimentos, dessa forma mantendo um local centralizado em que outros enteressados poderam consultar posteriormente facilitando em muito a comunição e contato em caso de necessidade.
 
