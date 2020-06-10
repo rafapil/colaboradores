@@ -34,7 +34,7 @@
     <div id='stars3'></div>
     <div id='title'>
         <span>
-            Colabores
+            Colaboradores
         </span>
         <br>
         <span>
