@@ -6,6 +6,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+<p><strong>Projeto em desenvolvimento!</strong><br>Essa é a v0 do projeto.<br>
+    Pontos de Melhoria a ser revisados<br>
+<ul>
+<li>Incluir Validadores no Laravel</li>
+    <li>Incluir mensagens de erro mais amigaveis</li>
+    <li>Alterar link colaborador para painel de controle</li>
+    <li>Incluir modo mult-Empresas</li>
+    <li>Incluir listagem com contato de todos os colaboradores com filtro</li>
+    <li>Incluir APIs para mobile</li>
+</ul>
+</p>
 
 <h2>Projeto Colaboradores</h2>
 <p>Imagens</p>
